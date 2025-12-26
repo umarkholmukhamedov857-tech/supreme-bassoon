@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секрет раскрыт!</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        #secretImage {
+            width: 340px;
+            height: 250px;
+            object-fit: cover;
+            border: 15px solid #ca6f1aa6;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #registerLink {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #registerLink a {
+            color: #ca6f1a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #registerLink a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img 
+            id="secretImage" 
+            src="./image.png" 
+            alt="Секретное изображение" 
+            onclick="revealLink()"
+        >
+        <div id="registerLink">
+            🔓 <a href="https://iplogger.com/2XqMA5" target="_blank">Зарегистрируйтесь здесь</a>
+        </div>
+    </div>
+
+    <script>
+        function revealLink() {
+            const img = document.getElementById("secretImage");
+            const link = document.getElementById("registerLink");
+
+            img.style.display = "none";
+            link.style.display = "block";
+        }
+    </script>
+</body>
+</html>
